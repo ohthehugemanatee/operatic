@@ -11,12 +11,16 @@
     <meta name="description" content="Operatic ist ein Musikdokumentarfilm über das junge Opern-Ensemble The Cast. Dessen Ansatz es ist Opernmusik einem breiteren Publikum zugänglich zu machen, ausserhalb des Establishments der klassisichen Operhäuser. Das Filmteam begleitet das Ensemble über ein Jahr lang auf seiner Deutschlandtour mit Konzerten in Hamburg, Berlin, Bremen, Köln, Bonn und einem besonderen Konzert in Paris. Der Film gibt einen Einblick in das Leben freiberuflicher Opernsänger, die Zusammmenarbeit in einem Ensemble und die Notwendigkeit als Musiker neue Wege gehen zu müssen, um mit den Gegensätzlichkeiten der aktuellen Situation in der Opern- und Musikindustrie überleben zu können."  />
 		<meta name="keywords" content="Operatic opera dokumentarfilm film Cast Campbell Vertesi Alison Scherzer Brigitte Heuser Bryn Vertesi Kevin Moreno Till Bleckwedel Dimitrij Morozov" />
 		<meta name="robots" content="index, follow" />
-		<meta property="og:url" content="http://operaticthefilm.com/" />
+		<meta property="og:url" content="http://operatic.de/" />
 		<meta property="og:image" content="http://operatic.de/images/fb-poster.jpg" />
+		<meta property="og:image:width" content="1440" />
+		<meta property="og:image:height" content="612" />
+
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/skel.min.js"></script>
+		<script src="js/vimeo.ga.min.js"></script>
 		<script src="js/init.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
@@ -53,7 +57,7 @@
                 <div class="content dark style2">
                     <div class="container">
                         <div class='embed-container'>
-                            <iframe src='https://player.vimeo.com/video/120569251' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                            <iframe src='https://player.vimeo.com/video/120569251?api=1&player_id=vimeo-player-1' id="vimeo-player-1" data-progress="true" data-seek="true" data-bounce="true" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                         </div>
                     <h2>Sehen Sie sich den Trailer an</h2>
                     </div>
@@ -72,37 +76,42 @@
                                 <tr>
                                     <td>Köln | Filmforum</td>
                                     <td>23.5.2015 | 20:30 Uhr</td>
-                                    <td>Tickets</td>
+                                    <td><a href="https://www.eventbrite.com/e/premiere-des-musikdokumentarfilms-operatic-featuring-the-cast-tickets-16466622110">Tickets</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Münster</td>
-                                    <td>TBA</td>
-                                    <td>Tickets</td>
+                                    <td>Bremen | Schauburg</td>
+                                    <td>7.6.2015 | 19:00 Uhr</td>
+                                    <td><a href="http://www.bremerfilmkunsttheater.de/Kino_Reservierungen/Schauburg.html">Info</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Bremen</td>
-                                    <td>TBA</td>
-                                    <td>Tickets</td>
+                                  <td>Paris | T.A.C. Malambo Studio</td>
+                                  <td>12.6.2015</td>
+                                  <td><a href="http://www.malambo.fr/">Info</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Hamburg</td>
-                                    <td>TBA</td>
-                                    <td>Tickets</td>
+                                  <td>Dortmund | Kino im Dortmunder U</td>
+                                  <td>13.6.2015</td>
+                                  <td><a href="http://www.dortmunder-u.de/">Info</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Berlin</td>
-                                    <td>TBA</td>
-                                    <td>Tickets</td>
+                                  <td>Münster | Cinema</td>
+                                  <td>18.6.2015 | 18:00 Uhr</td>
+                                  <td><a href="http://www.cinema-muenster.de/">Info</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Dortmund</td>
-                                    <td>TBA</td>
-                                    <td>Tickets</td>
+                                  <td>Duisberg | Filmforum Duisburg</td>
+                                  <td>25.6.2015 | 19:00 Uhr</td>
+                                  <td><a href="http://www.filmforum.de/">Info</a></td>
                                 </tr>
                                 <tr>
-                                    <td>Paris</td>
-                                    <td>TBA</td>
-                                    <td>Tickets</td>
+                                  <td>Hamburg</td>
+                                  <td>TBA</td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>Berlin</td>
+                                  <td>TBA</td>
+                                  <td></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -246,6 +255,16 @@
         ga('linker:autolink', ['operaticthefilm.com']);
         ga('send', 'pageview');
 
-      </script>
+				ga('send', 'event', 'Vimeo', 'Started video', 'https://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+				ga('send', 'event', 'Vimeo', 'Paused video', 'https://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+				ga('send', 'event', 'Vimeo', 'Resumed video', 'http://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+				ga('send', 'event', 'Vimeo', 'Completed video', 'http://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+				ga('send', 'event', 'Vimeo', 'Skipped video forward or backward', 'http://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+
+				ga('send', 'event', 'Vimeo', 'Played video: 25%', 'http://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+				ga('send', 'event', 'Vimeo', 'Played video: 50%', 'http://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+				ga('send', 'event', 'Vimeo', 'Played video: 75%', 'http://player.vimeo.com/video/120569251', undefined, {'nonInteraction': 1});
+
+			</script>
 	</body>
 </html>
